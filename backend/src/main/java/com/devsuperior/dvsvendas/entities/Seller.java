@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_sellers")
-public class Sellers {
+public class Seller {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,10 +23,10 @@ public class Sellers {
 	@OneToMany(mappedBy = "seller")
 	private List<Sale> sales = new ArrayList<>(); 
 	
-	public Sellers () {
+	public Seller () {
 	}
 
-	public Sellers(Long id, String name) {
+	public Seller(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
